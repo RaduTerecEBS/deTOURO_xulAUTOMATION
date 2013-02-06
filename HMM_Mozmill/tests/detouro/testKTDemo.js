@@ -1,9 +1,15 @@
-var tabs = require("../../lib/tabs");
-var domUtils = require("../../lib/dom-utils");
+// Welcome to the KT Demo test code
+// This is using Mozmill XUL Runner automation tool
+// Technologies: Javascript, Python
+
+var tabs = require("../../firefoxLib/tabs");
+var domUtils = require("../../firefoxLib/dom-utils");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TYPE = "elke";
 
+// This is the setup module
+// This method's purpose is to establish test prerequisites
 function setupModule() {
   controller = mozmill.getBrowserController();
   nodeCollector = new domUtils.nodeCollector(controller.window.document);
@@ -11,11 +17,14 @@ function setupModule() {
   tabs.closeAllTabs(controller);
 }
 
+// This is the teardown module method
+// Its used to cleanup the test
 function teardownModule() {
   //XXX: No test memory to cleanup right now
 }
 
 // Test method
+// This is the actual test method
 function testKT() {
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -56,10 +65,7 @@ function testKT() {
   controller.sleep(3000);
  
   // click on the found entry "elke"
-  var elke =  new elementslib.XPath(controller.tabs.activeTab, "/html/body/form[@id='aspnetForm']/" +
-                                                               "div[3]/div[3]/table[@id='ctl00_MainContent_ASPxGridViewDrives']/" +
-															   "tbody/tr[1]/td/table[@id='ctl00_MainContent_ASPxGridViewDrives_DXMainTable']/" +
-															   "tbody/tr[@id='ctl00_MainContent_ASPxGridViewDrives_DXDataRow0']/td[4]");
+  var elke =   new elementslib.XPath(controller.tabs.activeTab, "/html/body/form[@id='aspnetForm']/div[3]/div[@id='main']/div[2]/table[@id='ctl00_MainContent_ASPxGridViewDrives']/tbody/tr[1]/td/table[@id='ctl00_MainContent_ASPxGridViewDrives_DXMainTable']/tbody/tr[@id='ctl00_MainContent_ASPxGridViewDrives_DXDataRow0']/td[@id='ctl00_MainContent_ASPxGridViewDrives_tccell0_7']/span");
   controller.click(elke);
   controller.waitForPageLoad();
   

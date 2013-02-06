@@ -1,5 +1,6 @@
-var tabs = require("../../lib/tabs");
-var domUtils = require("../../lib/dom-utils");
+// This is the LE Demo for deTouro
+var tabs = require("../../firefoxLib/tabs");
+var domUtils = require("../../firefoxLib/dom-utils");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 

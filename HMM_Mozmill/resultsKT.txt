@@ -1,0 +1,17 @@
+
+
+I am in deTouro KT right now
+
+
+
+Type of tableElem variable = object
+
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testKTDemo.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testKTDemo.js | testKTDemo.js::setupModule
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testKTDemo.js | testKT
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testKTDemo.js | testKTDemo.js::testKT
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testKTDemo.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testKTDemo.js | testKTDemo.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
