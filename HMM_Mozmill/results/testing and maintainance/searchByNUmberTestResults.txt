@@ -1,0 +1,9 @@
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByNumber.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByNumber.js | testSearchByNumber.js::setupModule
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByNumber.js | testSearchByNumber
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByNumber.js | testSearchByNumber.js::testSearchByNumber
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByNumber.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByNumber.js | testSearchByNumber.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
