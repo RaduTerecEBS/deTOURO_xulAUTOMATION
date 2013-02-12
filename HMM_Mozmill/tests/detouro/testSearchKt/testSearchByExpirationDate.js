@@ -14,11 +14,13 @@ function teardownModule() {
   //XXX: No test memory to cleanup right now
 }
 
-function testSearchByInsNumber() {
+function testSearchByExpirationDate() {
   var kt,
     ktas,
-    insField,
-    insResultField;
+    dateInput,
+    dateForm,
+    selectedDay,
+    noData;
 
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -39,22 +41,26 @@ function testSearchByInsNumber() {
   controller.click(ktas);
   controller.waitForPageLoad();
 
-  // Insurance Number field
-  insField = new elementslib.ID(controller.window.document,
-  	                            "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol4_I");
+  // Select a date via the date selection dropdown
+  dateInput = new elementslib.ID(controller.tabs.activeTab,
+                                 "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol21_B-1Img");
+  dateForm = new elementslib.ID(controller.tabs.activeTab,
+                                "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol21_DDD_C");
 
-  controller.type(insField, TEST_DATA);
-  controller.waitForPageLoad();
+  controller.click(dateInput);
+  controller.waitFor(function() {
+    return dateForm.getNode() !== null;
+  }, "Date input form loaded successfully");
 
-  // Test we have proper search results
-  insResultField = new elementslib.ID(controller.tabs.activeTab,
-  	                                  "ctl00_MainContent_ASPxGridViewDrives_tccell0_4");
+  selectedDay = new elementslib.XPath(controller.tabs.activeTab,
+                                      ".//*[@id='ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol21_DDD_C_mt']" +
+                                      "/tbody/tr[5]/td[5]");
+  controller.click(selectedDay);
 
-  dump("\n\n ERROR = " + insResultField.getNode().textContent + "\n\n");
-  dump("\n\n GOOD = " + parseInt(insResultField.getNode().textContent) + "\n\n");
+  noData = new elementslib.Selector(controller.tabs.activeTab, ".dxgv>div");
 
+  // XXX: No data to display on this test, this is the purpose of it
   controller.waitFor(function () {
-  	return parseInt(insResultField.getNode().textContent) === parseInt(TEST_DATA);
-  }, "Search term has appropriate results --> " + "got: " +
-     insResultField.getNode().textContent);
+    return noData.getNode() !== null;
+  }, "We have no data to display");
 }

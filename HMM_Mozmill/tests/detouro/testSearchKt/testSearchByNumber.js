@@ -14,7 +14,7 @@ function teardownModule() {
   //XXX: No test memory to cleanup right now
 }
 
-function testSearchByNumber () {
+function testSearchByNumber() {
   var kt,
     ktas,
     noField,
