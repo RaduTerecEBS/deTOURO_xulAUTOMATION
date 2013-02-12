@@ -1,5 +1,4 @@
 var tabs = require("../../../firefoxLib/tabs");
-var domUtils = require("../../../firefoxLib/dom-utils");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TEST_DATA_NAME = "Daag";
@@ -52,7 +51,6 @@ function testSearchByName() {
   }, "Name is correctly written");
 
   grid = new elementslib.Selector(controller.tabs.activeTab, ".main");
-  dump("\n\n grid type= " + typeof grid.getNode() + "\n\n");
 
   // Set the firstname
   firstname = new elementslib.ID(controller.tabs.activeTab,
@@ -63,7 +61,7 @@ function testSearchByName() {
   firstname.getNode().addEventListener("input", function () {
     // Reset the value from the name field
     name.getNode().value = "";
-    dump("\n\n in the event listener method \n\n");
+    dump("\n-- INPUT EVENT FIRED --\n");
   }, false);
 
   controller.type(firstname, TEST_DATA_FIRSTNAME);

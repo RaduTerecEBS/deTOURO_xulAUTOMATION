@@ -1,7 +1,7 @@
 var tabs = require("../../../firefoxLib/tabs");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
-const TEST_DATA = "22875360200";
+const TEST_DATA = "bremen";
 
 function setupModule() {
   controller = mozmill.getBrowserController();
@@ -13,11 +13,11 @@ function teardownModule() {
   //XXX: No test memory to cleanup right now
 }
 
-function testSearchByInsNumber() {
+function testSearchByDestinationPlace() {
   var kt,
     ktas,
-    insField,
-    insResultField;
+    destinationPlaceField,
+    testResultAtLeastOne;
 
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -38,22 +38,19 @@ function testSearchByInsNumber() {
   controller.click(ktas);
   controller.waitForPageLoad();
 
-  // Insurance Number field
-  insField = new elementslib.ID(controller.window.document,
-  	                            "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol4_I");
-
-  controller.type(insField, TEST_DATA);
-  controller.waitForPageLoad();
-
-  // Test we have proper search results
-  insResultField = new elementslib.ID(controller.tabs.activeTab,
-  	                                  "ctl00_MainContent_ASPxGridViewDrives_tccell0_4");
-
-  //dump("\n\n ERROR = " + insResultField.getNode().textContent + "\n\n");
-  //dump("\n\n GOOD = " + parseInt(insResultField.getNode().textContent) + "\n\n");
+  destinationPlaceField = new elementslib.ID(controller.window.document,
+                                             "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol28_I");
+  controller.type(destinationPlaceField, TEST_DATA);
 
   controller.waitFor(function () {
-  	return parseInt(insResultField.getNode().textContent) === parseInt(TEST_DATA);
-  }, "Search term has appropriate results --> " + "got: " +
-     insResultField.getNode().textContent);
+    return destinationPlaceField.getNode().value === TEST_DATA;
+  }, "Start place typed correctly");
+
+  //XXX: if first row cell is present then we have at least one result for the given test data
+  testResultAtLeastOne = new elementslib.ID(controller.window.document,
+                                            "ctl00_MainContent_ASPxGridViewDrives_tccell0_28");
+  // XXX: used containes until the spaces bug are eliminated
+  controller.waitFor(function() {
+    return testResultAtLeastOne.getNode().textContent.toLowerCase().contains(TEST_DATA);
+  }, "At least one result is present");
 }
