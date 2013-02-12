@@ -1,5 +1,4 @@
 var tabs = require("../../../firefoxLib/tabs");
-var domUtils = require("../../../firefoxLib/dom-utils");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TEST_DATA = "75";
