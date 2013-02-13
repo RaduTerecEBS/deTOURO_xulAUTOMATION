@@ -1,0 +1,9 @@
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePage.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePage.js | testHomePage.js::setupModule
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePage.js | testHomePage
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePage.js | testHomePage.js::testHomePage
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePage.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePage.js | testHomePage.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
