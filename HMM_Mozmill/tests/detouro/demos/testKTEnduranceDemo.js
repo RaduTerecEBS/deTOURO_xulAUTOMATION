@@ -1,9 +1,9 @@
 /** 
  * deTouro endurance test automation demo file
  */
-var endurance = require("../../firefoxLib/endurance");
-var tabs = require("../../firefoxLib/tabs");
-var domUtils = require("../../firefoxLib/dom-utils");
+var endurance = require("../../../firefoxLib/endurance");
+var tabs = require("../../../firefoxLib/tabs");
+var domUtils = require("../../../firefoxLib/dom-utils");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan:9002/Auctions/ShowAuctions.aspx";
 

@@ -2,8 +2,8 @@
 // This is using Mozmill XUL Runner automation tool
 // Technologies: Javascript, Python
 
-var tabs = require("../../firefoxLib/tabs");
-var domUtils = require("../../firefoxLib/dom-utils");
+var tabs = require("../../../firefoxLib/tabs");
+var domUtils = require("../../../firefoxLib/dom-utils");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TYPE = "elke";
