@@ -1,7 +1,8 @@
 var tabs = require("../../../firefoxLib/tabs");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
-const TEST_DATA = "75";
+const TEST_VNR_DATA = "2287";
+const VNR_TIMEOUT = 30000;
 
 function setupModule() {
   controller = mozmill.getBrowserController();
@@ -13,11 +14,13 @@ function teardownModule() {
   //XXX: No test memory to cleanup right now
 }
 
-function testSearchByNumber() {
+function testAddNewKta() {
   var kt,
     ktas,
-    noField,
-    noResultField;
+    newKtaButton,
+    vnrField,
+    vnrAutocomplete,
+    vnrResult;
 
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -38,20 +41,32 @@ function testSearchByNumber() {
   controller.click(ktas);
   controller.waitForPageLoad();
 
-  // Number field
-  noField = new elementslib.ID(controller.window.document,
-  	                           "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol1_I");
-
-  controller.type(noField, TEST_DATA);
+  // Click Neues KTA
+  newKtaButton = new elementslib.ID(controller.tabs.activeTab,
+                                    "ctl00_MainContent_ASPxButtonNew_B");
+  controller.click(newKtaButton);
   controller.waitForPageLoad();
 
-  // Test we have proper search results
-  noResultField = new elementslib.ID(controller.window.document,
-  	                                 "ctl00_MainContent_ASPxGridViewDrives_tccell0_1");
+  vnrField = new elementslib.ID(controller.tabs.activeTab,
+                                "ctl00_MainContent_formViewInsured_textBoxVNR");
+  controller.type(vnrField, TEST_VNR_DATA);
+  controller.waitFor(function () {
+    return vnrField.getNode().value === TEST_VNR_DATA;
+  }, "VNR Data correctly typed");
+
+  vnrAutocomplete = new elementslib.ID(controller.tabs.activeTab,
+                                       "ui-id-1");
 
   controller.waitFor(function () {
-  	return parseInt(noResultField.getNode().textContent) === parseInt(TEST_DATA);
-  }, "Search term has appropriate results --> " + "got: " +
-     noResultField.getNode().textContent);
-}
+    return vnrAutocomplete.getNode() !== null;
+  }, "Autocomplete loaded successfully", VNR_TIMEOUT);
 
+  /*vnrResult = new elementslib.ID(controller.tabs.activeTab,
+                                 "ui-id-96");*/
+  vnrResult = new elementslib.Selector(controller.tabs.activeTab, ".ui-corner-all");
+  dump("\n asda" + vnrResult.length + "\n");
+  controller.click(vnrResult);
+  controller.waitForPageLoad();
+
+
+}

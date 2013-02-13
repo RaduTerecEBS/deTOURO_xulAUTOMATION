@@ -1,0 +1,9 @@
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByExpirationDate.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByExpirationDate.js | testSearchByExpirationDate.js::setupModule
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByExpirationDate.js | testSearchByExpirationDate
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByExpirationDate.js | testSearchByExpirationDate.js::testSearchByExpirationDate
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByExpirationDate.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testSearchKt\testSearchByExpirationDate.js | testSearchByExpirationDate.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
