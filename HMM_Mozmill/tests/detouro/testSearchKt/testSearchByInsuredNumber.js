@@ -49,8 +49,8 @@ function testSearchByInsNumber() {
   insResultField = new elementslib.ID(controller.tabs.activeTab,
   	                                  "ctl00_MainContent_ASPxGridViewDrives_tccell0_4");
 
-  //dump("\n\n ERROR = " + insResultField.getNode().textContent + "\n\n");
-  //dump("\n\n GOOD = " + parseInt(insResultField.getNode().textContent) + "\n\n");
+  dump("\n\n ERROR = " + insResultField.getNode().textContent + "\n\n");
+  dump("\n\n GOOD = " + parseInt(insResultField.getNode().textContent) + "\n\n");
 
   controller.waitFor(function () {
   	return parseInt(insResultField.getNode().textContent) === parseInt(TEST_DATA);
