@@ -4,6 +4,8 @@ var valid = require("../../../deTouroLib/validations");
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TEST_VNR_DATA = "22875360200";
 const TEST_ANR_DATA = "999919102";
+const TEST_HOSPITAL_DATA = "International Neuroscience";
+
 const VNR_TIMEOUT = 30000;
 
 function setupModule() {
@@ -26,7 +28,14 @@ function testAddNewKta() {
     nextButton,
     ktaFormElements,
     anrButton,
-    nextButtonViewDoctor;
+    nextButtonViewDoctor,
+    hospitalField,
+    nextButtonHospital,
+    numberDrives,
+    saveButton,
+    assignedKtaNumber,
+    zoneContainer,
+    publishAuctionButton;
 
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -69,7 +78,7 @@ function testAddNewKta() {
 
   controller.click(vnrAutocomplete);
   controller.waitForPageLoad();
-  // XXX: Sleep for 3 seconds to wait for the form to complete additions
+  // XXX: Sleep for 10 seconds to wait for the form to complete additions
   //      This should be changed with an API method to wait for the proper events
   controller.sleep(10000);
   // Check that required info are retrieved in the form
@@ -112,5 +121,55 @@ function testAddNewKta() {
   nextButtonViewDoctor = new elementslib.ID(controller.tabs.activeTab,
                                             "ctl00_MainContent_formViewDoctor_ASPxButtonNext_B");
   controller.click(nextButtonViewDoctor);
+  controller.waitForPageLoad();
+
+  hospitalField = new elementslib.ID(controller.tabs.activeTab,
+                                     "ctl00_MainContent_formViewDetails_textBoxInstitutionName");
+  controller.type(hospitalField, TEST_HOSPITAL_DATA);
+  controller.waitFor(function () {
+    return hospitalField.getNode().value === TEST_HOSPITAL_DATA;
+  },"Hospital data typed correctly");
+
+  controller.sleep(5000);
+  controller.click(vnrAutocomplete);
+  controller.waitForPageLoad();
+  controller.sleep(5000);
+
+  numberDrives = new elementslib.ID(controller.tabs.activeTab,
+                                    "ctl00_MainContent_formViewDetails_textBoxNoDrives");
+  numberDrives.getNode().value = "2";
+  
+  controller.waitFor(function() {
+    return numberDrives.getNode().value === "2";
+  }, "Number of rides typed correctly");
+
+  nextButtonHospital = new elementslib.ID(controller.tabs.activeTab,
+                                          "ctl00_MainContent_formViewDetails_ASPxButtonNext_B");
+
+  controller.click(nextButtonHospital);
+  controller.waitForPageLoad();
+
+  saveButton = new elementslib.ID(controller.tabs.activeTab,
+                                  "ctl00_MainContent_formViewTransport_ASPxButtonNext_B");
+  controller.click(saveButton);
+  controller.waitForPageLoad();
+
+  // Check we have a KTA number on the UI (page left side)
+  assignedKtaNumber = new elementslib.ID(controller.tabs.activeTab, "ctl00_labelNumber");
+  controller.assert(function () {
+    return assignedKtaNumber.getNode().textContent !== undefined;
+  },"We have a KTA number!");
+
+  zoneContainer = new elementslib.ID(controller.tabs.activeTab,
+                                     "zoneContainer");
+
+  // A dock panel page should appear containing data
+  controller.assert(function () {
+    return zoneContainer.getNode() !== null;
+  }, "Proper page loaded after saved new KTA");
+
+  publishAuctionButton = new elementslib.ID(controller.tabs.activeTab,
+                                            "ctl00_MainContent_footerFormView_ASPxButtonAuctionPublish_B");
+  controller.click(publishAuctionButton);
   controller.waitForPageLoad();
 }
