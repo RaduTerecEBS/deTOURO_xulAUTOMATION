@@ -90,16 +90,6 @@ function testAddNewKta() {
   nextButton = new elementslib.ID(controller.tabs.activeTab,
                                   "ctl00_MainContent_formViewInsured_ASPxButtonNext_B");
 
-  // XXX: debugging kta fields object in validations API
-  dump("\n Debugging start ... \n\n");
-  dump("\n valid length IDS: " + valid.IDS.length + "\n");
-  dump("\n valid IDS: " + valid.IDS + "\n");
-  dump("\n valid IDS[0]: " + valid.IDS[0] + "\n");
-  dump("\n valid IDS[1].id: " + valid.IDS[1].id + "\n");
-  dump("\n valid IDS[1].id: " + valid.IDS[3].type + "\n");
-  dump("\n valid IDS[1].id: " + valid.IDS[4].name + "\n");
-  dump("\n Debugging end ... \n\n");
-
   ktaFormElements = validation.getKtaFormElementList();
 
   //XXX: To be moved in API for deTouro KT later

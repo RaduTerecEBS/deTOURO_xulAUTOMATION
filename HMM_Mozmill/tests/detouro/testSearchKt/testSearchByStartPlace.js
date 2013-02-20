@@ -1,10 +1,12 @@
 var tabs = require("../../../firefoxLib/tabs");
+var ktas = require("../../../deTouroLib/ktas");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TEST_DATA = "oldenburg";
 
 function setupModule() {
   controller = mozmill.getBrowserController();
+  ktas = new ktas.Ktas(controller);
   
   tabs.closeAllTabs(controller);
 }
@@ -15,7 +17,7 @@ function teardownModule() {
 
 function testSearchByStartPlace() {
   var kt,
-    ktas,
+    ktasButton,
     startPlaceField,
     testResultAtLeastOne;
 
@@ -31,20 +33,14 @@ function testSearchByStartPlace() {
   controller.waitForPageLoad();
 
   // XXX: Bitte nicht XPATH verwenden, nur wenn gibt es nicht etwas anderes
-  ktas = new elementslib.XPath(controller.tabs.activeTab, "/html/body/form[@id='aspnetForm']/" +
-                                                          "div[3]/div[2]/div[2]/div/div/div/" +
-													                                "div/span");
+  ktasButton = new elementslib.XPath(controller.tabs.activeTab, "/html/body/form[@id='aspnetForm']/" +
+                                                                "div[3]/div[2]/div[2]/div/div/div/" +
+													                                      "div/span");
   
-  controller.click(ktas);
+  controller.click(ktasButton);
   controller.waitForPageLoad();
 
-  startPlaceField = new elementslib.ID(controller.window.document,
-                                       "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol25_I");
-  controller.type(startPlaceField, TEST_DATA);
-
-  controller.waitFor(function () {
-    return startPlaceField.getNode().value === TEST_DATA;
-  }, "Start place typed correctly");
+  ktas.search("ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol25_I", TEST_DATA);
 
   //XXX: if first row cell is present then we have at least one result for the given test data
   testResultAtLeastOne = new elementslib.ID(controller.window.document,
