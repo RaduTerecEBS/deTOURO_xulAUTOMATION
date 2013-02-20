@@ -1,7 +1,7 @@
 /**
  * Constructor
  */
-function Les (aController) {
+function Les(aController) {
   this._controller = aController;
 }
 
@@ -31,8 +31,12 @@ Les.prototype = {
    * @returns Boolean
    */
   loginHelper: function Les_loginHelper(user, password) {
+    var loginButton = new elementslib.ID(this.controller.tabs.activeTab,
+                                         "topbutton-1082-btnEl");
+    this.controller.click(loginButton);
+
     var userField = new elementslib.ID(this.controller.window.document,
-                                       "ctl00_ContentPlaceHolder1_UserName_I");
+                                       "textfield-1151-inputEl");
     this.controller.type(userField, user);
   
     dump("\n\n user value == " + userField.value);
@@ -43,7 +47,7 @@ Les.prototype = {
     }, "The user name is typed correctly");
   
     var passwordField = new elementslib.ID(this.controller.window.document,
-                                           "ctl00_ContentPlaceHolder1_Password_I");
+                                           "textfield-1152-inputEl");
     this.controller.type(passwordField, password);
   
     // wait for the pass to finish typing
@@ -52,7 +56,7 @@ Les.prototype = {
     }, "The password is typed correctly");
   
     var loginButton = new elementslib.ID(this.controller.window.document,
-                                         "ctl00_ContentPlaceHolder1_LoginButton_CD");
+                                         "button-1156-btnEl");
   
     this.controller.click(loginButton);
     this.controller.waitForPageLoad();
