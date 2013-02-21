@@ -40,7 +40,9 @@ function testAddNewKta() {
     cancelButton,
     cancelOKButton,
     backButton,
-    canceledAuctionsButton;
+    canceledAuctionsButton,
+    getKTANumber,
+    labelNumber;
 
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -155,6 +157,8 @@ function testAddNewKta() {
     return assignedKtaNumber.getNode().textContent !== undefined;
   },"We have a KTA number!");
 
+  getKTANumber = parseInt(assignedKtaNumber.getNode().textContent.slice(9,12));
+
   zoneContainer = new elementslib.ID(controller.tabs.activeTab,
                                      "zoneContainer");
 
@@ -166,30 +170,5 @@ function testAddNewKta() {
   publishAuctionButton = new elementslib.ID(controller.tabs.activeTab,
                                             "ctl00_MainContent_footerFormView_ASPxButtonAuctionPublish_B");
   controller.click(publishAuctionButton);
-  controller.waitForPageLoad();
-
-  // Cancel auction
-  cancelButton = new elementslib.ID(controller.tabs.activeTab,
-                                    "ctl00_MainContent_footerFormView_ASPxButtonAuctionCancel_B");
-
-  controller.click(cancelButton);
-
-  cancelOKButton = new elementslib.ID(controller.window.document, "formViewCancel_ASPxButtonOk_B");
-  controller.waitFor(function () {
-    return cancelOKButton.getNode() !== null;
-  }, "Waiting for the modal dialog");
-  controller.click(cancelOKButton);
-
-  // Verify output in UI of canceled auction
-  // XXX: Currently this button is a blocker, pending for a fix from production team
-  backButton = new elementslib.ID(controller.tabs.activeTab, "ctl00_ASPxMenu1_DXI0_T");
-
-  controller.click(backButton);
-  controller.waitForPageLoad();
-
-  canceledAuctionsButton = new elementslib.ID(controller.tabs.activeTab,
-                                              "ctl00_MainContent_ASPxMenuDisplayAuctions_DXI6_T");
-
-  controller.click(canceledAuctionsButton);
   controller.waitForPageLoad();
 }
