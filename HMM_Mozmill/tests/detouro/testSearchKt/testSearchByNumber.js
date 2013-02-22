@@ -44,14 +44,15 @@ function testSearchByNumber() {
 
   controller.type(noField, TEST_DATA);
   controller.waitForPageLoad();
+  controller.sleep(7000);
+  
+  var table = controller.tabs.activeTab.querySelectorAll(".dxgvDataRow_deTouroKT");
+  dump("\n length of table == " + table.length + "\n\n");
 
-  // Test we have proper search results
-  noResultField = new elementslib.ID(controller.window.document,
-  	                                 "ctl00_MainContent_ASPxGridViewDrives_tccell0_1");
-
-  controller.waitFor(function () {
-  	return parseInt(noResultField.getNode().textContent) === parseInt(TEST_DATA);
-  }, "Search term has appropriate results --> " + "got: " +
-     noResultField.getNode().textContent);
+  for (var i = 0, l = table.length; i < l - 2; i++) {
+    controller.assert(function () {
+      return table[i].textContent.contains(TEST_DATA);
+    },"Suggestion contains the search term");
+  }
 }
 
