@@ -37,10 +37,6 @@ function testAddNewKta() {
     assignedKtaNumber,
     zoneContainer,
     publishAuctionButton,
-    cancelButton,
-    cancelOKButton,
-    backButton,
-    canceledAuctionsButton,
     getKTANumber,
     labelNumber;
 

@@ -1,0 +1,9 @@
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testCancelAuction.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testCancelAuction.js | testCancelAuction.js::setupModule
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testCancelAuction.js | testCancelAuction
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testCancelAuction.js | testCancelAuction.js::testCancelAuction
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testCancelAuction.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testCancelAuction.js | testCancelAuction.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
