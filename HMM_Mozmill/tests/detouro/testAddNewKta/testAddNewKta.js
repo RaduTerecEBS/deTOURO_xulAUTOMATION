@@ -1,6 +1,7 @@
 var ktas = require("../../../deTouroLib/ktas");
 var modalDialog = require("../../../firefoxLib/modal-dialog");
 var tabs = require("../../../firefoxLib/tabs");
+var testData = require("../../../deTouroLib/test-data");
 var valid = require("../../../deTouroLib/validations");
 
 const TEST_VNR_DATA = "22875384000";
@@ -54,9 +55,9 @@ function testAddNewKta() {
 
   vnrField = new elementslib.ID(controller.tabs.activeTab,
                                 "ctl00_MainContent_formViewInsured_textBoxVNR");
-  controller.type(vnrField, TEST_VNR_DATA);
+  controller.type(vnrField, testData.testData.insuredNumber[4]);
   controller.waitFor(function () {
-    return vnrField.getNode().value === TEST_VNR_DATA;
+    return vnrField.getNode().value === testData.testData.insuredNumber[4];
   }, "VNR Data correctly typed");
 
   vnrAutocomplete = new elementslib.ID(controller.tabs.activeTab,
