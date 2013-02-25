@@ -36,11 +36,10 @@ function testCancelAuction() {
                                "ctl00_MainContent_ASPxGridViewDrives_tccell0_1");
   controller.click(auction);
   controller.waitForPageLoad();
-  controller.sleep(3000);
 
   cancelAuctionButton = new elementslib.ID(controller.tabs.activeTab,
                                            "ctl00_MainContent_footerFormView_ASPxButtonAuctionCancel_B");
-  controller.click(cancelAuctionButton);
+  controller.waitThenClick(cancelAuctionButton);
   controller.waitForPageLoad();
 
   var dialog = new elementslib.ID(controller.window.document, "ctl00_MainContent_popUpCancel_PW-1");
@@ -51,12 +50,7 @@ function testCancelAuction() {
   }, "Pop up cancel auction visible");
 
   cancelOKButton = new elementslib.ID(controller.window.document, "formViewCancel_ASPxButtonOk_B");
-  controller.waitFor(function () {
-    return cancelOKButton.getNode() !== null;
-  }, "Waiting for the modal dialog");
-  controller.sleep(2000);
-  
-  controller.click(cancelOKButton);
+  controller.waitThenClick(cancelOKButton);
 
   controller.waitForPageLoad();
   controller.sleep(2000);
@@ -65,7 +59,7 @@ function testCancelAuction() {
   // XXX: Currently this button is a blocker, pending for a fix from production team
   backButton = new elementslib.ID(controller.tabs.activeTab, "ctl00_ASPxMenu1_DXI0_I");
 
-  controller.click(backButton);
+  controller.waitThenClick(backButton);
   controller.waitForPageLoad();
 
   canceledAuctionsButton = new elementslib.ID(controller.window.document,
