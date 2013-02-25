@@ -40,7 +40,9 @@ function testAddNewKta() {
     zoneContainer,
     publishAuctionButton,
     getKTANumber,
-    labelNumber;
+    labelNumber,
+    driveKm,
+    index;
 
   enter = kt.enter();
   controller.assert(function () {
@@ -55,9 +57,11 @@ function testAddNewKta() {
 
   vnrField = new elementslib.ID(controller.tabs.activeTab,
                                 "ctl00_MainContent_formViewInsured_textBoxVNR");
-  controller.type(vnrField, testData.testData.insuredNumber[4]);
+  index = parseInt(Math.random() * testData.testData.insuredNumber.length + 1);
+
+  controller.type(vnrField, testData.testData.insuredNumber[index]);
   controller.waitFor(function () {
-    return vnrField.getNode().value === testData.testData.insuredNumber[4];
+    return vnrField.getNode().value === testData.testData.insuredNumber[index];
   }, "VNR Data correctly typed");
 
   vnrAutocomplete = new elementslib.ID(controller.tabs.activeTab,
@@ -129,10 +133,12 @@ function testAddNewKta() {
   numberDrives = new elementslib.ID(controller.tabs.activeTab,
                                     "ctl00_MainContent_formViewDetails_textBoxNoDrives");
   numberDrives.getNode().value = "2";
-  
-  controller.waitFor(function() {
-    return numberDrives.getNode().value === "2";
-  }, "Number of rides typed correctly");
+
+  driveKm = new elementslib.ID(controller.tabs.activeTab,
+                               "ctl00_MainContent_formViewDetails_textBoxDriveKm");
+  if (driveKm.getNode().value === "") {
+    driveKm.getNode().value = "132";
+  }
 
   nextButtonHospital = new elementslib.ID(controller.tabs.activeTab,
                                           "ctl00_MainContent_formViewDetails_ASPxButtonNext_B");
