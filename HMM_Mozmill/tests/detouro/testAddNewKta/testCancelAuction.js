@@ -54,7 +54,7 @@ function testCancelAuction() {
   controller.waitFor(function () {
     return cancelOKButton.getNode() !== null;
   }, "Waiting for the modal dialog");
-  controller.sleep(1000);
+  controller.sleep(2000);
   
   controller.click(cancelOKButton);
 
