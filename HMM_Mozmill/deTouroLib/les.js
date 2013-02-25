@@ -47,14 +47,14 @@ Les.prototype = {
     this.controller.type(fields, user);
     this.controller.waitFor(function () {
       return fields.getNode().value === user;
-    }, "Username typed correctly --> got --> ");
+    }, "Username typed correctly --> got --> " + fields.getNode().value);
 
     this.controller.keypress(null, 'VK_TAB', {});
 
     this.controller.type(fields, password);
     this.controller.waitFor(function () {
       return fields.getNode().value === password;
-    }, "Password typed correctly --> got --> ");
+    }, "Password typed correctly --> got --> " + fields.getNode().value);
 
     this.controller.keypress(null, 'VK_RETURN', {});
     this.controller.waitForPageLoad();
