@@ -104,9 +104,9 @@ Validation.prototype = {
      for (var i = 0, l = IDS.length; i < l; i++) {
        elements.push(new elementslib.ID(this.controller.tabs.activeTab, IDS[i].id));
        // XXX: debugging purposes
-       dump("\n elements = " +
+       /*dump("\n elements = " +
             (elements[i].getNode().value || elements[i].getNode().textContent)
-            + "\n"); 
+            + "\n");*/
      }
      return elements;
    },
@@ -118,10 +118,6 @@ Validation.prototype = {
     */
     checkEmptyKTAFields: function Validation_checkEmptyKTAFields() {
       var elements = this.getKtaFormElementList();
-
-      //XXX: Debugging purposes
-      dump("\n elements saved in check empty KTA fields method : " +
-           elements + "\n");
 
       for (var i = 0, l = elements.length; i < l; i++) {
         if (elements[i].getNode().value === "") {

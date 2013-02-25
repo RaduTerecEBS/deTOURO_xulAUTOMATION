@@ -1,12 +1,13 @@
+var ktas = require("../../../deTouroLib/ktas");
 var tabs = require("../../../firefoxLib/tabs");
 
-const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TEST_DATA_NAME = "Daag";
 const TEST_DATA_FIRSTNAME = "Elke";
 
 function setupModule() {
   controller = mozmill.getBrowserController();
-  
+  kt = new ktas.Ktas(controller);
+
   tabs.closeAllTabs(controller);
 }
 
@@ -15,30 +16,15 @@ function teardownModule() {
 }
 
 function testSearchByName() {
-  var kt,
-    ktas,
+  var enter,
     name,
     firstname,
     grid;
 
-  // open ebs.hmm.lan
-  controller.open(PAGE_SOURCE);
-  controller.waitForPageLoad();
-
-  // get the list element to enter detouro app and check
-  kt =  new elementslib.XPath(controller.tabs.activeTab, "/html/body/div[@id='content-outer']/" +
-                                                         "div[@id='content']/div/div[@id='banners']/" +
-													                               "table[2]/tbody/tr[1]/td[5]/a/b");
-  controller.click(kt);
-  controller.waitForPageLoad();
-
-  // XXX: Bitte nicht XPATH verwenden, nur wenn gibt es nicht etwas anderes
-  ktas = new elementslib.XPath(controller.tabs.activeTab, "/html/body/form[@id='aspnetForm']/" +
-                                                          "div[3]/div[2]/div[2]/div/div/div/" +
-													                                "div/span");
-  
-  controller.click(ktas);
-  controller.waitForPageLoad();
+  enter = kt.enter();
+  controller.assert(function () {
+    return enter;
+  }, "Success in entering kt page");
 
   name = new elementslib.ID(controller.tabs.activeTab,
                             "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol6_I");

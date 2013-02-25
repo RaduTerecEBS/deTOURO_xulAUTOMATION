@@ -39,8 +39,6 @@ Les.prototype = {
                                        "textfield-1151-inputEl");
     this.controller.type(userField, user);
   
-    dump("\n\n user value == " + userField.value);
-  
     // test the username is correcty typed and keyboard event finished
     this.controller.waitFor(function () {
       return (userField.getNode().value === user);
