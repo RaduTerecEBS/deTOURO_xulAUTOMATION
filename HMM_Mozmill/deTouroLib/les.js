@@ -31,36 +31,33 @@ Les.prototype = {
    * @returns Boolean
    */
   loginHelper: function Les_loginHelper(user, password) {
-    var loginButton = new elementslib.ID(this.controller.tabs.activeTab,
-                                         "topbutton-1082-btnEl");
+    var loginButton,
+      fields;
+
+    loginButton = new elementslib.ID(this.controller.tabs.activeTab,
+                                     "topbutton-1082-btnEl");
     this.controller.click(loginButton);
 
-    var userField = new elementslib.ID(this.controller.window.document,
-                                       "textfield-1151-inputEl");
-    this.controller.type(userField, user);
-  
-    // test the username is correcty typed and keyboard event finished
+    // XXX: To be changed with waitFor
+    this.controller.sleep(2000);
+
+    fields = new elementslib.Selector(this.controller.tabs.activeTab,
+                                      ".x-form-field.x-form-text.x-form-focus");
+
+    this.controller.type(fields, user);
     this.controller.waitFor(function () {
-      return (userField.getNode().value === user);
-    }, "The user name is typed correctly");
-  
-    var passwordField = new elementslib.ID(this.controller.window.document,
-                                           "textfield-1152-inputEl");
-    this.controller.type(passwordField, password);
-  
-    // wait for the pass to finish typing
+      return fields.getNode().value === user;
+    }, "Username typed correctly --> got --> ");
+
+    this.controller.keypress(null, 'VK_TAB', {});
+
+    this.controller.type(fields, password);
     this.controller.waitFor(function () {
-      return (passwordField.getNode().value === password);
-    }, "The password is typed correctly");
-  
-    var loginButton = new elementslib.ID(this.controller.window.document,
-                                         "button-1156-btnEl");
-  
-    this.controller.click(loginButton);
+      return fields.getNode().value === password;
+    }, "Password typed correctly --> got --> ");
+
+    this.controller.keypress(null, 'VK_RETURN', {});
     this.controller.waitForPageLoad();
-  
-    // Escape the Firefox notification for password saving
-    this.controller.keypress(null, 'VK_ESCAPE', {});
   }
 }
 

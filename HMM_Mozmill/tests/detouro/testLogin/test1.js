@@ -4,8 +4,8 @@ var les = require("../../../deTouroLib/les");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 
-const BENUTZERNAME = "Mihai";
-const PASSWORT = "ch@ng3m42";
+const BENUTZERNAME = "vlad";
+const PASSWORT = "User7";
 
 function setupModule() {
   controller = mozmill.getBrowserController();
@@ -33,22 +33,16 @@ function testLoginLE() {
 																                             "table[2]/tbody/tr[1]/td[2]/a/b");
   controller.click(lePage);
   controller.waitForPageLoad();
-  
-  // XXX: Demo purpose sleep
-  controller.sleep(2000);
 
   les.loginHelper(BENUTZERNAME, PASSWORT);
-  
-  // XXX: Demo purpose sleep
-  controller.sleep(2000);
-  
-  // Maximize Firefox Window now
-  controller.window.STATE_MAXIMIZED = 1;
+  controller.waitForPageLoad();
 
   // Check we receive the correct login state of UI
-  user = new elementslib.ID(controller.window.document, "ctl00_CurrentUserInfo");
+  user = new elementslib.ID(controller.tabs.activeTab, "label-1323");
 
-  controller.assert(function () {
+  controller.waitThenClick(user);
+  
+  controller.waitFor(function () {
     return (user.getNode().textContent.contains(BENUTZERNAME) === true);
   }, "Login was correct");
 }

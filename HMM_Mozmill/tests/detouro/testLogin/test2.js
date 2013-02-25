@@ -32,7 +32,4 @@ function testLoginKT() {
 
   controller.click(laufende);
   controller.waitForPageLoad();
-
-  //XXX: sleep for testing purposes
-  controller.sleep(2000);
 }
