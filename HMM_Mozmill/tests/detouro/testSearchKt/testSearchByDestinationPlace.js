@@ -1,12 +1,11 @@
-var tabs = require("../../../firefoxLib/tabs");
 var ktas = require("../../../deTouroLib/ktas");
+var tabs = require("../../../firefoxLib/tabs");
 
-const PAGE_SOURCE = "http://ebs.hmm.lan/";
 const TEST_DATA = "bremen";
 
 function setupModule() {
   controller = mozmill.getBrowserController();
-  ktas = new ktas.Ktas(controller);
+  kt = new ktas.Ktas(controller);
 
   tabs.closeAllTabs(controller);
 }
@@ -16,31 +15,16 @@ function teardownModule() {
 }
 
 function testSearchByDestinationPlace() {
-  var kt,
-    ktasButton,
+  var enter,
     destinationPlaceField,
     testResultAtLeastOne;
 
-  // open ebs.hmm.lan
-  controller.open(PAGE_SOURCE);
-  controller.waitForPageLoad();
+  enter = kt.enter();
+  controller.assert(function () {
+    return enter;
+  }, "Success in entering deTouro KT");
 
-  // get the list element to enter detouro app and check
-  kt =  new elementslib.XPath(controller.tabs.activeTab, "/html/body/div[@id='content-outer']/" +
-                                                         "div[@id='content']/div/div[@id='banners']/" +
-													                               "table[2]/tbody/tr[1]/td[5]/a/b");
-  controller.click(kt);
-  controller.waitForPageLoad();
-
-  // XXX: Bitte nicht XPATH verwenden, nur wenn gibt es nicht etwas anderes
-  ktasButton = new elementslib.XPath(controller.tabs.activeTab, "/html/body/form[@id='aspnetForm']/" +
-                                                                "div[3]/div[2]/div[2]/div/div/div/" +
-													                                      "div/span");
-  
-  controller.click(ktasButton);
-  controller.waitForPageLoad();
-  
-  ktas.search("ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol28_I",TEST_DATA);
+  kt.search("ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol28_I", TEST_DATA);
 
   //XXX: if first row cell is present then we have at least one result for the given test data
   testResultAtLeastOne = new elementslib.ID(controller.window.document,
