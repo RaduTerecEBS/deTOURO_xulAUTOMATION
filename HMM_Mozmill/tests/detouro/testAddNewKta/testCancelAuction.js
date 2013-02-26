@@ -42,14 +42,14 @@ function testCancelAuction() {
   controller.waitThenClick(cancelAuctionButton);
   controller.waitForPageLoad();
 
-  var dialog = new elementslib.ID(controller.window.document, "ctl00_MainContent_popUpCancel_PW-1");
+  var dialog = new elementslib.ID(controller.tabs.activeTab, "ctl00_MainContent_popUpCancel_PW-1");
   var style = controller.window.getComputedStyle(dialog.getNode(), '');
 
   controller.waitFor(function () {
     return style.getPropertyValue('visibility') === 'visible';
   }, "Pop up cancel auction visible");
 
-  cancelOKButton = new elementslib.ID(controller.window.document, "formViewCancel_ASPxButtonOk_B");
+  cancelOKButton = new elementslib.ID(controller.tabs.activeTab, "formViewCancel_ASPxButtonOk_B");
   controller.waitThenClick(cancelOKButton);
 
   controller.waitForPageLoad();
@@ -62,7 +62,7 @@ function testCancelAuction() {
   controller.waitThenClick(backButton);
   controller.waitForPageLoad();
 
-  canceledAuctionsButton = new elementslib.ID(controller.window.document,
+  canceledAuctionsButton = new elementslib.ID(controller.tabs.activeTab,
                                               "ctl00_MainContent_ASPxMenuDisplayAuctions_DXI6_T");
 
   controller.click(canceledAuctionsButton);
