@@ -27,7 +27,7 @@ function testSearchByName() {
   }, "Success in entering kt page");
 
   name = new elementslib.ID(controller.tabs.activeTab,
-                            "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol6_I");
+                            "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol3_I");
 
   
   controller.type(name, TEST_DATA_NAME);
@@ -40,14 +40,13 @@ function testSearchByName() {
 
   // Set the firstname
   firstname = new elementslib.ID(controller.tabs.activeTab,
-                                 "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol7_I");
+                                 "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol4_I");
 
   //XXX: Find the proper event to listen for
   //     Workaround: input event on the other text field
   firstname.getNode().addEventListener("input", function () {
     // Reset the value from the name field
     name.getNode().value = "";
-    dump("\n-- INPUT EVENT FIRED --\n");
   }, false);
 
   controller.type(firstname, TEST_DATA_FIRSTNAME);

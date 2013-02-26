@@ -4,11 +4,6 @@ var tabs = require("../../../firefoxLib/tabs");
 var testData = require("../../../deTouroLib/test-data");
 var valid = require("../../../deTouroLib/validations");
 
-const TEST_VNR_DATA = "22875384000";
-const TEST_KVNR_NUMBER = "T123456789";
-const TEST_ANR_DATA = "999944401";
-const TEST_HOSPITAL_DATA = "bertaklinik hannover";
-
 const VNR_TIMEOUT = 30000;
 
 function setupModule() {
@@ -42,7 +37,11 @@ function testAddNewKta() {
     getKTANumber,
     labelNumber,
     driveKm,
-    index;
+    index,
+    kvnr,
+    randKvnr,
+    indexAnr,
+    indexHospital;
 
   enter = kt.enter();
   controller.assert(function () {
@@ -57,7 +56,7 @@ function testAddNewKta() {
 
   vnrField = new elementslib.ID(controller.tabs.activeTab,
                                 "ctl00_MainContent_formViewInsured_textBoxVNR");
-  index = parseInt(Math.random() * testData.testData.insuredNumber.length + 1);
+  index = parseInt(Math.random() * testData.testData.insuredNumber.length);
 
   controller.type(vnrField, testData.testData.insuredNumber[index]);
   controller.waitFor(function () {
@@ -82,14 +81,16 @@ function testAddNewKta() {
 
   ktaFormElements = validation.getKtaFormElementList();
 
-  var kvnr = new elementslib.ID(controller.tabs.activeTab,
-                                "ctl00_MainContent_formViewInsured_textBoxKVNR");
+  kvnr = new elementslib.ID(controller.tabs.activeTab,
+                            "ctl00_MainContent_formViewInsured_textBoxKVNR");
+
+  randKvnr = "T" + parseInt(Math.random() * 999999999 + 1);
 
   // If KVNR Number is not retrieved from server, complete the field with a dummy one
   if (kvnr.getNode().value === "") {
-    controller.type(kvnr, TEST_KVNR_NUMBER);
+    controller.type(kvnr, randKvnr);
     controller.waitFor(function () {
-      return kvnr.getNode().value === TEST_KVNR_NUMBER;
+      return kvnr.getNode().value === randKvnr;
     }, "kvnr number typed successfully");
   }
   //XXX: To be moved in API for deTouro KT later
@@ -103,9 +104,11 @@ function testAddNewKta() {
   // XXX: Are datas of doctors completed entirely by the wbservice?
   anrButton = new elementslib.ID(controller.tabs.activeTab,
                                  "ctl00_MainContent_formViewDoctor_textBoxANR");
-  controller.type(anrButton, TEST_ANR_DATA);
+  indexAnr = parseInt(Math.random() * testData.testData.doctor.length);
+
+  controller.type(anrButton, testData.testData.doctor[indexAnr]);
   controller.waitFor(function () {
-    return anrButton.getNode().value === TEST_ANR_DATA;
+    return anrButton.getNode().value === testData.testData.doctor[indexAnr];
   }, "Anr data successfully typed in the proper field");
 
   controller.click(vnrAutocomplete);
@@ -120,9 +123,11 @@ function testAddNewKta() {
 
   hospitalField = new elementslib.ID(controller.tabs.activeTab,
                                      "ctl00_MainContent_formViewDetails_textBoxInstitutionName");
-  controller.type(hospitalField, TEST_HOSPITAL_DATA);
+  indexHospital = parseInt(Math.random() * testData.testData.hospital.length);
+
+  controller.type(hospitalField, testData.testData.hospital[indexHospital]);
   controller.waitFor(function () {
-    return hospitalField.getNode().value === TEST_HOSPITAL_DATA;
+    return hospitalField.getNode().value === testData.testData.hospital[indexHospital];
   },"Hospital data typed correctly");
 
   controller.sleep(5000);
@@ -136,7 +141,7 @@ function testAddNewKta() {
 
   driveKm = new elementslib.ID(controller.tabs.activeTab,
                                "ctl00_MainContent_formViewDetails_textBoxDriveKm");
-  if (driveKm.getNode().value === "") {
+  if (driveKm.getNode().value === "0") {
     driveKm.getNode().value = "132";
   }
 

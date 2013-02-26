@@ -35,10 +35,20 @@ var testData = {
     "999963534",
     "999919102",
     "999934802",
-    "999944401"
+    "999944401",
+    "999975303",
+    "999983715",
+    "999992228",
+    "999933768",
+    "999916868",
   ],
   hospital: [
-
+    "bertaklinik hannover",
+    "Dilyma",
+    "Asklepios Privita Komfortklinik Wiesbaden",
+    "Werner-Otto-Institut",
+    "International Neuroscience",
+    "ifi-Institut"
   ]
 }
 

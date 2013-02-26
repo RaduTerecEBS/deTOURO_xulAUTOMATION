@@ -26,14 +26,14 @@ function testSearchByInsNumber() {
 
   // Insurance Number field
   insField = new elementslib.ID(controller.window.document,
-  	                            "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol4_I");
+  	                            "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol2_I");
 
   controller.type(insField, TEST_DATA);
   controller.waitForPageLoad();
 
   // Test we have proper search results
   insResultField = new elementslib.ID(controller.tabs.activeTab,
-  	                                  "ctl00_MainContent_ASPxGridViewDrives_tccell0_4");
+  	                                  "ctl00_MainContent_ASPxGridViewDrives_tccell0_2");
 
   controller.waitFor(function () {
   	return parseInt(insResultField.getNode().textContent) === parseInt(TEST_DATA);

@@ -26,9 +26,9 @@ function testSearchByExpirationDate() {
 
   // Select a date via the date selection dropdown
   dateInput = new elementslib.ID(controller.tabs.activeTab,
-                                 "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol21_B-1Img");
+                                 "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol5_B-1Img");
   dateForm = new elementslib.ID(controller.tabs.activeTab,
-                                "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol21_DDD_C");
+                                "ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol5_DDD_C");
 
   controller.click(dateInput);
   controller.waitFor(function() {
@@ -36,14 +36,15 @@ function testSearchByExpirationDate() {
   }, "Date input form loaded successfully");
 
   selectedDay = new elementslib.XPath(controller.tabs.activeTab,
-                                      ".//*[@id='ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol21_DDD_C_mt']" +
-                                      "/tbody/tr[5]/td[5]");
+                                      ".//*[@id='ctl00_MainContent_ASPxGridViewDrives_DXFREditorcol5_DDD_C_mt']" +
+                                      "/tbody/tr[4]/td[4]");
   controller.click(selectedDay);
 
-  noData = new elementslib.Selector(controller.tabs.activeTab, ".dxgv>div");
+  noData = new elementslib.Selector(controller.tabs.activeTab,
+                                    "#ctl00_MainContent_ASPxGridViewDrives_tccell0_5");
 
   // XXX: No data to display on this test, this is the purpose of it
   controller.waitFor(function () {
-    return noData.getNode() !== null;
-  }, "We have no data to display");
+    return noData.getNode().textContent.contains(".");
+  }, "We have data to display");
 }
