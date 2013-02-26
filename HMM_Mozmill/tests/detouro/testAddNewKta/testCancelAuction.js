@@ -42,7 +42,7 @@ function testCancelAuction() {
   controller.waitThenClick(cancelAuctionButton);
   controller.waitForPageLoad();
 
-  var dialog = new elementslib.ID(controller.tabs.activeTab, "ctl00_MainContent_popUpCancel_PW-1");
+  var dialog = new elementslib.ID(controller.window.document, "ctl00_MainContent_popUpCancel_PW-1");
   var style = controller.window.getComputedStyle(dialog.getNode(), '');
 
   controller.waitFor(function () {

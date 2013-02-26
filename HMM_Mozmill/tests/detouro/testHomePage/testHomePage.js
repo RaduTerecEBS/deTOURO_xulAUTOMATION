@@ -1,7 +1,7 @@
 var tabs = require("../../../firefoxLib/tabs");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
-const EXPLANATION = "Explanation";
+const EXPLANATION = "Erklärung";
 
 const AUCTION_IMG_SRC = "http://ebs.hmm.lan:9002/Resources/Images/AVAs.png";
 const FDL_IMG_SRC = "http://ebs.hmm.lan:9002/Resources/Images/FDLs.png";
