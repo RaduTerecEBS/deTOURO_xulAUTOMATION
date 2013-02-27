@@ -9,6 +9,8 @@ function setupModule() {
   nodeCollector = new domUtils.nodeCollector(controller.window.document);
   kt = new ktas.Ktas(controller);
   
+controller.window.maximize();
+
   tabs.closeAllTabs(controller);
 }
 

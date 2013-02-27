@@ -12,6 +12,8 @@ function setupModule() {
   nodeCollector = new domUtils.nodeCollector(controller.window.document);
   les = new les.Les(controller);
   
+controller.window.maximize();
+
   tabs.closeAllTabs(controller);
 }
 
