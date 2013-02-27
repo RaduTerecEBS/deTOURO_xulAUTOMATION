@@ -84,7 +84,7 @@ function testAddNewKta() {
   kvnr = new elementslib.ID(controller.tabs.activeTab,
                             "ctl00_MainContent_formViewInsured_textBoxKVNR");
 
-  randKvnr = "T" + parseInt(Math.random() * 999999999 + 1);
+  randKvnr = "T" + parseInt(Math.random() * (999999999 - 100000000) + 100000000);
 
   // If KVNR Number is not retrieved from server, complete the field with a dummy one
   if (kvnr.getNode().value === "") {
