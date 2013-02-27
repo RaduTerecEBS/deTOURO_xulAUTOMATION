@@ -26,7 +26,8 @@ function testCancelAuction() {
     labelNumber,
     cancelOKButton,
     canceledAuctionsButton,
-    backButton;
+    backButton,
+    status;
 
   enter = kt.enter();
   controller.assert(function () {
@@ -59,6 +60,12 @@ function testCancelAuction() {
   controller.waitThenClick(cancelOKButton, TIMEOUT);
 
   controller.sleep(TIMEOUT);
+
+  status = new elementslib.ID(controller.tabs.activeTab,
+                              "ctl00_MainContent_formViewAva_ASPxDockPanel6_textBoxStatus");
+  controller.waitFor(function () {
+    return status.getNode().value === "Storniert";
+  }, "Status is Canceled");
 
   // Verify output in UI of canceled auction
   // XXX: Currently this button is a blocker, pending for a fix from production team
