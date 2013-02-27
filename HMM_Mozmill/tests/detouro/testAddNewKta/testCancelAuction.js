@@ -9,6 +9,8 @@ function setupModule() {
   validation = new valid.Validation(controller);
   kt = new ktas.Ktas(controller);
 
+  controller.window.maximize();
+
   tabs.closeAllTabs(controller);
 }
 
@@ -44,21 +46,24 @@ function testCancelAuction() {
   controller.waitThenClick(cancelAuctionButton);
   controller.waitForPageLoad();
 
-  var dialog = new elementslib.ID(controller.window.document, "ctl00_MainContent_popUpCancel_PWH-1");
+  var dialog = new elementslib.ID(controller.window.document,
+                                  "ctl00_MainContent_popUpCancel_PWH-1");
   var style = controller.window.getComputedStyle(dialog.getNode(), '');
 
   controller.waitFor(function () {
     return style.getPropertyValue('visibility') === 'visible';
   }, "Pop up cancel auction visible", TIMEOUT);
 
-  cancelOKButton = new elementslib.ID(controller.tabs.activeTab, "formViewCancel_ASPxButtonOk_B");
+  cancelOKButton = new elementslib.ID(controller.tabs.activeTab,
+                                      "formViewCancel_ASPxButtonOk_B");
   controller.waitThenClick(cancelOKButton, TIMEOUT);
 
   controller.sleep(TIMEOUT);
 
   // Verify output in UI of canceled auction
   // XXX: Currently this button is a blocker, pending for a fix from production team
-  backButton = new elementslib.ID(controller.tabs.activeTab, "ctl00_ASPxMenu1_DXI0_I");
+  backButton = new elementslib.ID(controller.tabs.activeTab,
+                                  "ctl00_ASPxMenu1_DXI0_I");
 
   controller.waitThenClick(backButton, TIMEOUT);
   controller.waitForPageLoad();
