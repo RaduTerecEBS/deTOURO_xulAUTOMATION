@@ -2,6 +2,8 @@ var ktas = require("../../../deTouroLib/ktas");
 var tabs = require("../../../firefoxLib/tabs");
 var valid = require("../../../deTouroLib/validations");
 
+const TIMEOUT = 8000;
+
 function setupModule() {
   controller = mozmill.getBrowserController();
   validation = new valid.Validation(controller);
@@ -42,30 +44,29 @@ function testCancelAuction() {
   controller.waitThenClick(cancelAuctionButton);
   controller.waitForPageLoad();
 
-  var dialog = new elementslib.ID(controller.window.document, "ctl00_MainContent_popUpCancel_PW-1");
+  var dialog = new elementslib.ID(controller.window.document, "ctl00_MainContent_popUpCancel_PWH-1");
   var style = controller.window.getComputedStyle(dialog.getNode(), '');
 
   controller.waitFor(function () {
     return style.getPropertyValue('visibility') === 'visible';
-  }, "Pop up cancel auction visible");
+  }, "Pop up cancel auction visible", TIMEOUT);
 
   cancelOKButton = new elementslib.ID(controller.tabs.activeTab, "formViewCancel_ASPxButtonOk_B");
-  controller.waitThenClick(cancelOKButton);
+  controller.waitThenClick(cancelOKButton, TIMEOUT);
 
-  controller.waitForPageLoad();
-  controller.sleep(2000);
+  controller.sleep(TIMEOUT);
 
   // Verify output in UI of canceled auction
   // XXX: Currently this button is a blocker, pending for a fix from production team
   backButton = new elementslib.ID(controller.tabs.activeTab, "ctl00_ASPxMenu1_DXI0_I");
 
-  controller.waitThenClick(backButton);
+  controller.waitThenClick(backButton, TIMEOUT);
   controller.waitForPageLoad();
 
   canceledAuctionsButton = new elementslib.ID(controller.tabs.activeTab,
-                                              "ctl00_MainContent_ASPxMenuDisplayAuctions_DXI6_T");
+                                              "ctl00_MainContent_ASPxMenuDisplayAuctions_DXI5_T");
 
-  controller.click(canceledAuctionsButton);
+  controller.waitThenClick(canceledAuctionsButton, TIMEOUT);
   controller.waitForPageLoad();
 
   labelNumber = new elementslib.ID(controller.tabs.activeTab,
