@@ -45,9 +45,9 @@ function testHomePage() {
   	                                     "x-window-default "+ 
   	                                     "x-closable x-window-closable " +
   	                                     "x-window-default-closable");
-  dump("\n login dialog node : " + loginDialog.getNode() + "\n");
+  dump("\n login dialog node : " + loginDialog.hidden + "\n");
   controller.waitFor(function () {
   	return loginDialog.hidden === false;
   }, "login dialog just popped");
-  dump("\n login dialog node after waiting: " + loginDialog.getNode() + "\n");
+  dump("\n login dialog node after waiting: " + loginDialog.hidden + "\n");
 }
