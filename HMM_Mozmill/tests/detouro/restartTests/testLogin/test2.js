@@ -1,6 +1,6 @@
-var ktas = require("../../../deTouroLib/ktas");
-var tabs = require("../../../firefoxLib/tabs");
-var domUtils = require("../../../firefoxLib/dom-utils");
+var ktas = require("../../../../deTouroLib/ktas");
+var tabs = require("../../../../firefoxLib/tabs");
+var domUtils = require("../../../../firefoxLib/dom-utils");
 
 // const TYPE = "elke";
 

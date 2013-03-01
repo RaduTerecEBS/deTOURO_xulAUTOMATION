@@ -18,7 +18,7 @@ function teardownModule() {
 }
 
 /**
- * Test elements of home page
+ * Test elements of home page KT
  */
 function testHomePage() {
   var kt,

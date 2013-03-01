@@ -1,6 +1,6 @@
-var tabs = require("../../../firefoxLib/tabs");
-var domUtils = require("../../../firefoxLib/dom-utils");
-var les = require("../../../deTouroLib/les");
+var tabs = require("../../../../firefoxLib/tabs");
+var domUtils = require("../../../../firefoxLib/dom-utils");
+var les = require("../../../../deTouroLib/les");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 

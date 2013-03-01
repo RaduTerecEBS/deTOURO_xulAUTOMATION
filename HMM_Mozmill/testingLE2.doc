@@ -1,0 +1,13 @@
+
+ activeAuctionsList = 5
+
+ login dialog node : null
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePageLE.js::setupModule
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePage
+TEST-UNEXPECTED-FAIL | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePageLE.js::testHomePage
+TEST-START | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\Documents\GitHub\vlad\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePageLE.js::teardownModule
+INFO Passed: 2
+INFO Failed: 1
+INFO Skipped: 0
