@@ -29,7 +29,12 @@ var testData = {
     "22875362900",
     "22875352100",
     "22875352201",
-    "22875349100"
+    "22875349100",
+    "27500757904",
+    "24282599300",
+    "41378242389",
+    "22875360200",
+    "40038593900"
   ],
   doctor: [
     "999963534",
@@ -37,10 +42,27 @@ var testData = {
     "999934802",
     "999944401",
     "999975303",
-    "999983715",
     "999992228",
     "999933768",
     "999916868",
+    "847321068",
+    "365042015",
+    "761077368",
+    "744969479",
+    "003903004",
+    "974454368",
+    "764371868",
+    "842372128",
+    "845928168",
+    "008359068",
+    "924975668",
+    "208790169",
+    "882849968",
+    "931234756",
+    "380639968",
+    "754818368",
+    "775180860",
+    "828222461"
   ],
   hospital: [
     "bertaklinik hannover",
@@ -48,7 +70,24 @@ var testData = {
     "Asklepios Privita Komfortklinik Wiesbaden",
     "Werner-Otto-Institut",
     "International Neuroscience",
-    "ifi-Institut"
+    "ifi-Institut",
+    "Park-Klinik GmbH",
+    "Fachkrankenhaus Nordfriesland gGmbH",
+    "Sana Kliniken Ostholstein GmbH Klinik Burg auf Fehmarn",
+    "Klinik Dr. H. J. Knees",
+    "Paracelsus-Klinik",
+    "Bundeswehrkrankenhaus",
+    "Friedrich Ebert Krankenhaus",
+    "Evangelisches Krankenhaus Alsterdorf",
+    "Hamburgisches Krankenhaus Edmundsthal",
+    "MediClin Reha-Zentrum Gernsbach",
+    "Medical Park Berlin Humboldtm",
+    "Stadtambulatorium",
+    "Staatliche Zahnarztpraxis",
+    "Medizinisches Versorgungszentrum Demmin gGmbH",
+    "Medizinisches Zentrum Nord Ambulatorium",
+    "Gesundheitszentrum Mittenwalde",
+    "Cardio Centrum Berlin GmbH Medizinisches"
   ]
 }
 
