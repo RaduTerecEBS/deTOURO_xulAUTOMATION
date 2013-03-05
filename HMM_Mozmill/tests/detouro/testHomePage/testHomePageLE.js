@@ -21,7 +21,11 @@ function testHomePage() {
   var le,
     activeAuctionsList,
     activeAuction,
-    loginDialog;
+    loginDialog,
+    dialogButtons,
+    cancelLoginButton,
+    regButton,
+    regCloseButton;
 
   controller.open(PAGE_SOURCE);
   controller.waitForPageLoad();
@@ -34,20 +38,23 @@ function testHomePage() {
 
   // Check active auctions panel on home page
   activeAuctionsList = controller.tabs.activeTab.querySelectorAll(".trip-item-wrapper");
-  dump("\n activeAuctionsList = " + activeAuctionsList.length + "\n");
+
   // Transform a node into an element
   activeAuction = new elementslib.Elem(activeAuctionsList[0]);
 
   controller.click(activeAuction);
-  
-  loginDialog = new elementslib.Selector(controller.tabs.activeTab,
-  	                                     "x-window x-message-box x-layer " +
-  	                                     "x-window-default "+ 
-  	                                     "x-closable x-window-closable " +
-  	                                     "x-window-default-closable");
-  dump("\n login dialog node : " + loginDialog.hidden + "\n");
-  controller.waitFor(function () {
-  	return loginDialog.hidden === false;
-  }, "login dialog just popped");
-  dump("\n login dialog node after waiting: " + loginDialog.hidden + "\n");
+
+  dialogButtons = controller.tabs.activeTab.querySelectorAll(".x-btn-center");
+  cancelLoginButton = new elementslib.Elem(dialogButtons[14]);
+
+  controller.waitForElement(cancelLoginButton, 5000);
+  controller.click(cancelLoginButton);
+
+  regButton = new elementslib.Selector(controller.tabs.activeTab,
+  	                                   ".registration-button-center");
+  controller.click(regButton);
+  controller.waitForPageLoad();
+
+  regCloseButton = new elementslib.Selector(controller.tabs.activeTab, ".x-tool-close");
+  controller.click(regCloseButton);
 }
