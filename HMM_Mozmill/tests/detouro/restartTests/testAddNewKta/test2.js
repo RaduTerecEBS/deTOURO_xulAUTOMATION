@@ -51,9 +51,6 @@ function testLoginLE() {
     return (user.getNode().textContent.contains(BENUTZERNAME) === true);
   }, "Login was correct");
 
-  // Check that the new auction is in LE
-  dump("persisted kta number = " + persisted.ktaNumber + "\n");
-
   ktaNumbers = controller.tabs.activeTab.querySelectorAll(".x-grid-cell-inner");
   number = new elementslib.Elem(ktaNumbers[1]);
 
