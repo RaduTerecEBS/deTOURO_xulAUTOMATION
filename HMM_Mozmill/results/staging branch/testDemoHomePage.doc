@@ -1,0 +1,15 @@
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageKT.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageKT.js | testHomePageKT.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageKT.js | testHomePage
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageKT.js | testHomePageKT.js::testHomePage
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageKT.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageKT.js | testHomePageKT.js::teardownModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePageLE.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePage
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePageLE.js::testHomePage
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testHomePage\testHomePageLE.js | testHomePageLE.js::teardownModule
+INFO Passed: 6
+INFO Failed: 0
+INFO Skipped: 0

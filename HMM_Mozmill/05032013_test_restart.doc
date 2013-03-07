@@ -1,0 +1,37 @@
+
+
+ kta number = 1828
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::teardownModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | testLoginLE
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::testLoginLE
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::teardownModule
+INFO Passed: 6
+INFO Failed: 0
+INFO Skipped: 0
+
+
+ kta number = 1829
+persisted kta number = 1829
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::teardownModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | testLoginLE
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::testLoginLE
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::teardownModule
+INFO Passed: 6
+INFO Failed: 0
+INFO Skipped: 0

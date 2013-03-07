@@ -35,7 +35,7 @@ Les.prototype = {
       fields;
 
     loginButton = new elementslib.ID(this.controller.tabs.activeTab,
-                                     "topbutton-1082-btnEl");
+                                     "topbutton-1068-btnEl");
     this.controller.click(loginButton);
 
     // XXX: To be changed with waitFor

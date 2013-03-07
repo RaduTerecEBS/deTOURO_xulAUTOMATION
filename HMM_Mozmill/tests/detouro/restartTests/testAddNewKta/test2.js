@@ -18,12 +18,15 @@ function setupModule() {
 }
 
 function teardownModule() {
-  //XXX: No test memory to cleanup right now
+  // Cleanup
+  delete persisted.ktaNumber;
 }
 
 function testLoginLE() {
   var lePage,
-    user;
+    user,
+    ktaNumbers,
+    number;
 
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -47,4 +50,14 @@ function testLoginLE() {
   controller.waitFor(function () {
     return (user.getNode().textContent.contains(BENUTZERNAME) === true);
   }, "Login was correct");
+
+  // Check that the new auction is in LE
+  dump("persisted kta number = " + persisted.ktaNumber + "\n");
+
+  ktaNumbers = controller.tabs.activeTab.querySelectorAll(".x-grid-cell-inner");
+  number = new elementslib.Elem(ktaNumbers[1]);
+
+  controller.waitFor(function () {
+    return parseInt(number.getNode().textContent) === persisted.ktaNumber;
+  }, "The newly added auction is present in LE");
 }
