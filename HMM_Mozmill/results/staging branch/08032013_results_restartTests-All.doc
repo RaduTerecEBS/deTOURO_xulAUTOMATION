@@ -1,0 +1,27 @@
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test1.js | test1.js::teardownModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | testLoginLE
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::testLoginLE
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testAddNewKta\test2.js | test2.js::teardownModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test1.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test1.js | test1.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test1.js | testLoginLE
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test1.js | test1.js::testLoginLE
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test1.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test1.js | test1.js::teardownModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test2.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test2.js | test2.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test2.js | testLoginKT
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test2.js | test2.js::testLoginKT
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test2.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\restartTests\testLogin\test2.js | test2.js::teardownModule
+INFO Passed: 12
+INFO Failed: 0
+INFO Skipped: 0
