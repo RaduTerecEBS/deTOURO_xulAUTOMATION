@@ -22,7 +22,7 @@ function teardownModule() {
   delete persisted.ktaNumber;
 }
 
-function testVerifyAuction() {
+function testEnterAnOffer() {
   var lePage,
     user,
     ktaNumbers,
@@ -51,10 +51,5 @@ function testVerifyAuction() {
     return (user.getNode().textContent.contains(BENUTZERNAME) === true);
   }, "Login was correct");
 
-  ktaNumbers = controller.tabs.activeTab.querySelectorAll(".x-grid-cell-inner");
-  number = new elementslib.Elem(ktaNumbers[1]);
-
-  controller.waitFor(function () {
-    return parseInt(number.getNode().textContent) === persisted.ktaNumber;
-  }, "The newly added auction is present in LE");
+  
 }
