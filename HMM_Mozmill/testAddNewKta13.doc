@@ -1,0 +1,136 @@
+
+ VNR used = 22875360200
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875345900
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875362900
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875351300
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875351300
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875341600
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875393900
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875362900
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-UNEXPECTED-FAIL | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 2
+INFO Failed: 1
+INFO Skipped: 0
+
+ VNR used = 22875362900
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875345900
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875343200
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+Timeout: bridge.execFunction("3ea64830-8a39-11e2-9720-84a6c810a3af", bridge.registry["{2ff2bec3-b619-480a-a690-a6c0d7ea532b}"]["runTestFile"], ["c:\\Users\\vlad.maniac\\deTOURO_xulAUTOMATION\\HMM_Mozmill\\tests\\detouro\\testAddNewKta\\testAddNewKta.js"])
+
+TEST-UNEXPECTED-FAIL | Disconnect Error: Application unexpectedly closed
+Timeout: bridge.set("8224e080-8a39-11e2-8bd0-84a6c810a3af", Components.utils.import('resource://mozmill/modules/mozmill.js'))
+
+INFO Passed: 1
+INFO Failed: 1
+INFO Skipped: 0
+
+ VNR used = 22875365300
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | setupModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::setupModule
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::testAddNewKta
+TEST-START | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | teardownModule
+TEST-PASS | c:\Users\vlad.maniac\deTOURO_xulAUTOMATION\HMM_Mozmill\tests\detouro\testAddNewKta\testAddNewKta.js | testAddNewKta.js::teardownModule
+INFO Passed: 3
+INFO Failed: 0
+INFO Skipped: 0
+
+ VNR used = 22875400501

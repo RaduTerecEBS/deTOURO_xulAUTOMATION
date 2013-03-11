@@ -59,6 +59,9 @@ function testAddNewKta() {
   index = parseInt(Math.random() * testData.testData.insuredNumber.length);
 
   controller.type(vnrField, testData.testData.insuredNumber[index]);
+  // XXX: We need to paste in console which VNR are we using
+  dump("\n VNR used = " + testData.testData.insuredNumber[index] + "\n");
+  
   controller.waitFor(function () {
     return vnrField.getNode().value === testData.testData.insuredNumber[index];
   }, "VNR Data correctly typed");
