@@ -1,3 +1,5 @@
+const TIMEOUT_PAGE = 30000;
+
 /**
  * Constructor
  */
@@ -39,10 +41,10 @@ Les.prototype = {
     this.controller.click(loginButton);
 
     // XXX: To be changed with waitFor
-    this.controller.sleep(2000);
+    this.controller.sleep(4000);
 
     fields = new elementslib.Selector(this.controller.tabs.activeTab,
-                                      ".x-form-field.x-form-text.x-form-focus");
+                                      ".x-form-field.x-form-text.x-form-focus.x-field-form-focus.x-field-default-form-focus");
 
     this.controller.type(fields, user);
     this.controller.waitFor(function () {
@@ -57,7 +59,7 @@ Les.prototype = {
     }, "Password typed correctly --> got --> " + fields.getNode().value);
 
     this.controller.keypress(null, 'VK_RETURN', {});
-    this.controller.waitForPageLoad();
+    this.controller.waitForPageLoad(TIMEOUT_PAGE);
   }
 }
 
