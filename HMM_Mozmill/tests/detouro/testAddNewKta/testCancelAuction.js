@@ -48,7 +48,7 @@ function testCancelAuction() {
   controller.waitForPageLoad();
 
   var dialog = new elementslib.ID(controller.window.document,
-                                  "ctl00_MainContent_popUpCancel_PWH-1");
+                                  "ctl00_MainContent_popUpCancel_HCB-1");
   var style = controller.window.getComputedStyle(dialog.getNode(), '');
 
   controller.waitFor(function () {
@@ -62,7 +62,7 @@ function testCancelAuction() {
   controller.sleep(TIMEOUT);
 
   status = new elementslib.ID(controller.tabs.activeTab,
-                              "ctl00_MainContent_formViewAva_ASPxDockPanel6_textBoxStatus");
+                              "ctl00_MainContent_formViewAva_ASPxDockPanelStatus_textBoxStatus");
   controller.waitFor(function () {
     return status.getNode().value === "Storniert";
   }, "Status is Canceled");
