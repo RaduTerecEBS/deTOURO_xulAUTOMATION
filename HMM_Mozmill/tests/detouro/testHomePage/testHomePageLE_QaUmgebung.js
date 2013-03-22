@@ -1,16 +1,28 @@
+var prefs = require("../../../firefoxLib/prefs");
 var tabs = require("../../../firefoxLib/tabs");
 
 const PAGE_SOURCE = "https://qa.de-touro.de/View/index.aspx";
 
+const PREF_SSL_OVERRIDE = "browser.ssl_override_behavior";
+const PREF_SSL_DISABLE = "security.enable_ssl3";
+const PREF_SSL_WARN = "security.default_personal_cert";
+
 function setupModule() {
   controller = mozmill.getBrowserController();
-  
+
+  prefs.preferences.setPref(PREF_SSL_OVERRIDE, 1);
+  prefs.preferences.setPref(PREF_SSL_DISABLE, false);
+  prefs.preferences.setPref(PREF_SSL_WARN, "Select Automatically");
+
   controller.window.maximize();
   tabs.closeAllTabs(controller);
 }
 
 function teardownModule() {
-  //XXX: No test memory to cleanup right now
+  // Cleanup prefs
+  prefs.preferences.clearUserPref(PREF_SSL_OVERRIDE);
+  prefs.preferences.clearUserPref(PREF_SSL_DISABLE);
+  prefs.preferences.clearUserPref(PREF_SSL_WARN);
 }
 
 /**
@@ -28,6 +40,7 @@ function testHomePage() {
 
   controller.open(PAGE_SOURCE);
   controller.waitForPageLoad();
+  controller.sleep(15000);
 
   // Check active auctions panel on home page
   activeAuctionsList = controller.tabs.activeTab.querySelectorAll(".trip-item-wrapper");
@@ -44,7 +57,7 @@ function testHomePage() {
   controller.click(cancelLoginButton);
 
   regButton = new elementslib.Selector(controller.tabs.activeTab,
-  	                                   ".registration-button-center");
+	                                     ".registration-button-center");
   controller.click(regButton);
   controller.waitForPageLoad();
 
