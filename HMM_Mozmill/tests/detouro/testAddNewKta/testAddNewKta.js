@@ -41,7 +41,10 @@ function testAddNewKta() {
     kvnr,
     randKvnr,
     indexAnr,
-    indexHospital;
+    indexHospital,
+    loading,
+    loadingStyle,
+    vnrAutocompleteStyle;
 
   enter = kt.enter();
   controller.assert(function () {
@@ -59,16 +62,28 @@ function testAddNewKta() {
   index = parseInt(Math.random() * testData.testData.insuredNumber.length);
 
   controller.type(vnrField, testData.testData.insuredNumber[index]);
-  // XXX: We need to paste in console which VNR are we using
-  dump("\n VNR used = " + testData.testData.insuredNumber[index] + "\n");
-  
   controller.waitFor(function () {
     return vnrField.getNode().value === testData.testData.insuredNumber[index];
   }, "VNR Data correctly typed");
 
+  controller.waitFor(function () {
+    return new elementslib.ID(controller.tabs.activeTab, "loadingDiv") !== null;
+  }, "Image loading is not null");
+
+  loading = new elementslib.ID(controller.tabs.activeTab, "loadingDiv");
+  loadingStyle = controller.window.getComputedStyle(loading.getNode(), "");
+
+  controller.waitFor(function () {
+    return loadingStyle.getPropertyValue("display") !== "none";
+  }, "Loading image is displayed");
+
   vnrAutocomplete = new elementslib.ID(controller.tabs.activeTab,
                                        "ui-id-1");
+  vnrAutocompleteStyle = controller.window.getComputedStyle(vnrAutocomplete.getNode(), "");
 
+  controller.waitFor(function () {
+    return vnrAutocompleteStyle.getPropertyValue("display") === "block";
+  }, "Autocomplete visible");
   controller.waitFor(function () {
     return vnrAutocomplete.getNode() !== null;
   }, "Autocomplete loaded successfully", VNR_TIMEOUT);
