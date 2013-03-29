@@ -36,7 +36,8 @@ function testEnterAnOffer() {
     actualBidFieldElem,
     confirmBidButton,
     yesBidButton,
-    bidValue;
+    bidValue,
+    index;
 
   // open ebs.hmm.lan
   controller.open(PAGE_SOURCE);
@@ -82,9 +83,11 @@ function testEnterAnOffer() {
 
   actualBidFieldElem = new elementslib.ID(controller.window.document, bidFieldId);
 
-  controller.type(actualBidFieldElem, "35");
+  index = parseInt(Math.random() * testData.testData.bid.length);
+
+  controller.type(actualBidFieldElem, testData.testData.bid[index]);
   controller.waitFor(function () {
-    return actualBidFieldElem.getNode().value === "35";
+    return actualBidFieldElem.getNode().value === testData.testData.bid[index];
   }, "Bid typed correctly in the bid field");
 
   // Now click to add the bid
@@ -104,6 +107,6 @@ function testEnterAnOffer() {
   bidValue = new elementslib.Elem(controller.tabs.activeTab.querySelectorAll(".x-form-display-field")[24]);
 
   controller.waitFor(function () {
-    return bidValue.getNode().textContent.contains("35");
+    return bidValue.getNode().textContent.contains(testData.testData[index]);
   }, "Bid value is displayed in the proper window");
 }
