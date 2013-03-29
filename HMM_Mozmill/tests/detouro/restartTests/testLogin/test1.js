@@ -4,8 +4,8 @@ var les = require("../../../../deTouroLib/les");
 
 const PAGE_SOURCE = "http://ebs.hmm.lan/";
 
-const BENUTZERNAME = "vladtest";
-const PASSWORT = "Vlad123";
+const BENUTZERNAME = "vladebs";
+const PASSWORT = "ungam+20";
 
 function setupModule() {
   controller = mozmill.getBrowserController();
