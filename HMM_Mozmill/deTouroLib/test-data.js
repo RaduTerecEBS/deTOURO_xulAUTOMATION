@@ -79,6 +79,24 @@ var testData = {
     "Medizinisches Zentrum Nord Ambulatorium",
     "Gesundheitszentrum Mittenwalde",
     "Cardio Centrum Berlin GmbH Medizinisches"
+  ],
+  bid: [
+    "35",
+    "14",
+    "85",
+    "143",
+    "7",
+    "17",
+    "123",
+    "500",
+    "50",
+    "95",
+    "22",
+    "44",
+    "51",
+    "100",
+    "87",
+    "76"
   ]
 }
 
