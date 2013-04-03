@@ -55,6 +55,11 @@ function testHomePage() {
   controller.click(regButton);
   controller.waitForPageLoad();
 
-  regCloseButton = new elementslib.Selector(controller.tabs.activeTab, ".x-tool-close");
+  regCloseButton = new elementslib.Selector(controller.window.document, ".x-tool-close");
+  controller.waitForElement(regCloseButton);
   controller.click(regCloseButton);
 }
+
+// XXX: Skip this test
+setupModule.__force_skip__ = "Issue 19 - Skip test due to app change";
+teardownModule.__force_skip__ = "Issue 19 - Skip test due to app change";
