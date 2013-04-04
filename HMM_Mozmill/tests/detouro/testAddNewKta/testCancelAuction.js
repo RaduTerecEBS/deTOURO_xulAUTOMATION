@@ -44,7 +44,8 @@ function testCancelAuction() {
 
   cancelAuctionButton = new elementslib.ID(controller.tabs.activeTab,
                                            "ctl00_MainContent_footerFormView_ASPxButtonAuctionCancel_B");
-  controller.waitThenClick(cancelAuctionButton);
+  controller.waitForElement(cancelAuctionButton);
+  controller.click(cancelAuctionButton);
   controller.waitForPageLoad();
 
   var dialog = new elementslib.ID(controller.window.document,
@@ -76,7 +77,7 @@ function testCancelAuction() {
   controller.waitForPageLoad();
 
   canceledAuctionsButton = new elementslib.ID(controller.tabs.activeTab,
-                                              "ctl00_MainContent_ASPxMenuDisplayAuctions_DXI5_T");
+                                              "ctl00_MainContent_ASPxMenuDisplayAuctions_DXI6_T");
 
   controller.waitThenClick(canceledAuctionsButton, TIMEOUT);
   controller.waitForPageLoad();

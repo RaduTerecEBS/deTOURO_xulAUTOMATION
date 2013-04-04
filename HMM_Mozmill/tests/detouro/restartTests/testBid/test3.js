@@ -49,16 +49,27 @@ function testBidInKT() {
   }, "Kta number matches from LE data");
 
   controller.click(kta);
-  controller.waitForPageLoad();
+  controller.waitForPageLoad(VNR_TIMEOUT);
 
-  runningAuction = new elementslib.ID(controller.window.document,
+  // XXX: Need the sleep here until we find the proper value to listen for
+  controller.sleep(2000);
+
+  runningAuction = new elementslib.ID(controller.tabs.activeTab,
   	                                  "ctl00_ASPxMenu1_DXI2_T");
 
+  controller.waitFor(function () {
+    return runningAuction.getNode().hidden === false;
+  }, "Gebotsverlauf button is loaded and can be accessed");
+
   controller.click(runningAuction);
-  controller.waitForPageLoad();
+  controller.waitForPageLoad(VNR_TIMEOUT);
 
   bidValueCheck = controller.tabs.activeTab.querySelectorAll(".noStyle");
+  dump("\n bid value check number of elements = " + bidValueCheck.length + "\n");
+
   bidElement = new elementslib.Elem(bidValueCheck[0]);
+
+  dump("\n typeof bid element = " + typeof bidElement + "\n");
 
   controller.waitFor(function () {
   	return bidElement.getNode().textContent.contains(persisted.amount);
