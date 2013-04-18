@@ -58,7 +58,7 @@ function testAddNewKta() {
 
   // Click Neues KTA
   newKtaButton = new elementslib.ID(controller.tabs.activeTab,
-                                    "ctl00_MainContent_ASPxButtonNew_B");
+                                    "ctl00_MainContent_linkButtonNewKta");
   controller.click(newKtaButton);
   controller.waitForPageLoad();
 
@@ -199,15 +199,15 @@ function testAddNewKta() {
 
   // Check new Auction is under "New Angelegt" menu
   // XXX: Currently this button is a blocker, pending for a fix from production team
-  backButton = new elementslib.ID(controller.tabs.activeTab,
-                                  "ctl00_ASPxMenu1_DXI0_I");
+  backButton = new elementslib.Selector(controller.tabs.activeTab,
+                                  ".level1 li:first-child");
 
   controller.waitThenClick(backButton, TIMEOUT);
   controller.waitForPageLoad();
 
-  newAuctionsListMenuButton = new elementslib.ID(controller.tabs.activeTab,
-                                                 "ctl00_MainContent_ASPxMenuDisplayAuctions_DXI1_T");
-  controller.waitThenClick(newAuctionsListMenuButton);
+  newAuctionsListMenuButton = new elementslib.Selector(controller.tabs.activeTab,
+                                                 ".level1 li:nth-child(2)");
+  controller.waitThenClick(newAuctionsListMenuButton, TIMEOUT);
   controller.waitForPageLoad();
 
   numberField = new elementslib.ID(controller.tabs.activeTab,

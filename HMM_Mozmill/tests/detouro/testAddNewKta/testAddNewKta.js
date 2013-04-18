@@ -53,7 +53,7 @@ function testAddNewKta() {
 
   // Click Neues KTA
   newKtaButton = new elementslib.ID(controller.tabs.activeTab,
-                                    "ctl00_MainContent_ASPxButtonNew_B");
+                                    "ctl00_MainContent_linkButtonNewKta");
   controller.click(newKtaButton);
   controller.waitForPageLoad();
 
@@ -191,7 +191,7 @@ function testAddNewKta() {
   }, "Proper page loaded after saved new KTA");
 
   publishAuctionButton = new elementslib.ID(controller.tabs.activeTab,
-                                            "ctl00_MainContent_footerFormView_ButtonAuctionPublish_B");
+                                            "ctl00_MainContent_footerFormView_linkButtonAuctionPublish");
   controller.click(publishAuctionButton);
   controller.waitForPageLoad();
 }

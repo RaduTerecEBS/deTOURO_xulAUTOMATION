@@ -64,9 +64,8 @@ Ktas.prototype = {
     this.controller.waitForPageLoad();
 
     // XXX: Bitte nicht XPATH verwenden, nur wenn gibt es nicht etwas anderes
-    ktas = new elementslib.XPath(this.controller.tabs.activeTab, "/html/body/form[@id='aspnetForm']/" +
-                                                                 "div[3]/div[2]/div[2]/div/div/div/" +
-                                                                 "div/span");
+    ktas = new elementslib.XPath(this.controller.tabs.activeTab, "/html/body/form/div[3]/div/div[2]/" +
+                                                                "div/div/div/div/span");
   
     this.controller.click(ktas);
     this.controller.waitForPageLoad();
